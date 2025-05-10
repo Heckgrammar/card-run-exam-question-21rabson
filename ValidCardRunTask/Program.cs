@@ -18,7 +18,16 @@
             int[] cards = dealCards();
             bool gameWon = false;
             // add your code here
-
+            
+            for (int i = 4; i < cards.Length; i++)
+            {
+                if (cards[i] == cards[i - 1] + 1 && cards[i] == cards[i - 2] + 2 && cards[i] == cards[i - 3] + 3 && cards[i] == cards[i - 4] + 4)
+                {
+                    gameWon = true;
+                    break;
+                }
+                
+            }
 
             // end of your code
             Console.WriteLine(gameWon);
